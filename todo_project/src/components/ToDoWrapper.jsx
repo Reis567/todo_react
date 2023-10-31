@@ -14,10 +14,14 @@ export const TodoWrapper = ()=>{
              isEditing:false}])
              console.log(todos)
     }
+
     return (
         <div className='TodoWrapper'>
             <TodoForm addTodo={addTodo}/>
-            <Todo/>
+            {todos.map((todo,index)=>(
+                <Todo task={todo} key={index}/>
+
+            ))}
         </div>
     )
 }
