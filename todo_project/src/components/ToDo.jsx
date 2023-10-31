@@ -1,10 +1,16 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 export const Todo = ()=>{
     return (
-        <form className='TodoForm'>
-            <input type="text"  className='todo-input' placeholder='Adicione uma tarefa'/>
-            <button type='submit' className='todo-btn'></button>
-        </form>
+        <div className='Todo'>
+            <p>Tarefa 1</p>
+            <div>
+            <FontAwesomeIcon className="edit-icon" icon={faPenToSquare} />
+            <FontAwesomeIcon className="delete-icon" icon={faTrash} />
+            </div>
+        </div>
     )
 }

@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { TodoForm } from './ToDoForm';
+import { Todo } from './ToDo';
 import {v4 as uuidv4} from 'uuid';
 uuidv4();
 
@@ -16,6 +17,7 @@ export const TodoWrapper = ()=>{
     return (
         <div className='TodoWrapper'>
             <TodoForm addTodo={addTodo}/>
+            <Todo/>
         </div>
     )
 }
