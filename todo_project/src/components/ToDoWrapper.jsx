@@ -11,7 +11,7 @@ export const TodoWrapper = ()=>{
             task:todo,
              completed:false,
              isEditing:false}])
-             console.log('Adicionada')
+             console.log(todos)
     }
     return (
         <div className='TodoWrapper'>
