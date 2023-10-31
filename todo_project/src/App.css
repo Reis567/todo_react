@@ -16,7 +16,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.title-main{
+  color: var(--brown);
+  font-size: 40px;
+}
 .App {
   text-align: center;
 }

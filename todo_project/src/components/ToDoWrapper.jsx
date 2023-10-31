@@ -4,6 +4,7 @@ import { Todo } from './ToDo';
 import {v4 as uuidv4} from 'uuid';
 uuidv4();
 
+
 export const TodoWrapper = ()=>{
     const [todos,setTodos] = useState([])
 
@@ -17,6 +18,9 @@ export const TodoWrapper = ()=>{
 
     return (
         <div className='TodoWrapper'>
+            <h1 className='title-main'>
+                ReactList
+            </h1>
             <TodoForm addTodo={addTodo}/>
             {todos.map((todo,index)=>(
                 <Todo task={todo} key={index}/>
