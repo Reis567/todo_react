@@ -7,15 +7,24 @@ uuidv4();
 
 
 export const TodoWrapper = ()=>{
-    const [todos,setTodos] = useState([])
+    const [todos, setTodos] = useState(() => {
+        // Tente recuperar os todos do localStorage, ou use um array vazio se não houver nada lá.
+        const storedTodos = JSON.parse(localStorage.getItem('todos')) || [];
+        return storedTodos;
+      });
 
-    const addTodo = todo =>{
-        setTodos([...todos,{id:uuidv4(),
-            task:todo,
-             completed:false,
-             isEditing:false}])
-             console.log(todos)
-    }
+      const addTodo = (todo) => {
+        const newTodo = {
+          id: uuidv4(),
+          task: todo,
+          completed: false,
+          isEditing: false,
+        };
+        setTodos([...todos, newTodo]);
+    
+        // Salvar os todos no localStorage
+        localStorage.setItem('todos', JSON.stringify([...todos, newTodo]));
+      };
     const toggleComplete = id =>{
         setTodos(todos.map(todo=> todo.id === id ? {...todo, completed: !todo.completed} : todo
             ))
