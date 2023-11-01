@@ -39,7 +39,6 @@ export const TodoWrapper = ()=>{
         setTodos(todos.map(todo=> todo.id === id ? {... todo,task,isEditing : !todo.isEditing}: todo))
     }
 
-
     return (
         <div className='TodoWrapper'>
             <h1 className='title-main'>
