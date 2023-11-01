@@ -110,3 +110,39 @@ h1 {
   padding: 10px;
 }
  
+
+@media (min-width: 376px) and (max-width: 767px) {
+  .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+  .TodoWrapper {
+    width: 75%;
+  }
+  .TodoForm {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .todo-input {
+    width: 65%;
+    padding: 0;
+    margin: 0;
+    padding: 10px 20px;
+  }
+  
+  
+  .todo-btn {
+    width: 35%;
+    padding: 0;
+    padding: 10px 20px;
+    margin: 0;
+    text-align: center;
+  }
+}
+
