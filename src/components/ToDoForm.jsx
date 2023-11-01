@@ -6,8 +6,11 @@ export const TodoForm = ({addTodo})=>{
 
     const handleSubmit = e => {
         e.preventDefault();
-        addTodo(value)
-        setValue("")
+        if(value.trim()!== ''){
+
+            addTodo(value)
+            setValue("")
+        }
     }
     return (
         <form className='TodoForm' onSubmit={handleSubmit}>
